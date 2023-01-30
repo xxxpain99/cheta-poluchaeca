@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfApp7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp7"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid >
+
+        <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition Width="200"/>
+          </Grid.ColumnDefinitions>
+
+            <Canvas Background="White" 
+                Name="AppCanvas" 
+                MouseMove="AppCanvas_MouseMove" 
+                MouseLeftButtonDown="AppCanvas_MouseLeftButtonDown">
+
+        </Canvas>
+
+    
+
+            <StackPanel Grid.Column="1" >
+            <Button x:Name="Rectangle" Click="Rectangle_Click"  Margin="6 4"> Прямоугольник</Button>
+            <Button x:Name="Elipse" Click="Elipse_Click" Margin="6 4" >Овал</Button>
+            <Button x:Name="Line" Click="Line_Click" Margin="6 4">Линия</Button>
+            <Label x:Name="NameFill"> Цвет заливки</Label>
+            <ComboBox x:Name="cbFill"> </ComboBox>
+            <Label x:Name="NameContour">Цвет контура</Label>
+            <ComboBox x:Name="cbContour"></ComboBox>
+            <Slider></Slider>
+
+        </StackPanel>
+
+
+
+
+    </Grid>
+</Window>
